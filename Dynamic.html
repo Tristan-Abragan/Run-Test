@@ -62,6 +62,11 @@ document.getElementById("searchBar").addEventListener("keyup", function() {
 
     rows.forEach(row => {
         let description = row.children[3].textContent.toLowerCase();
+        let year_level = row.children[0].textContent.toLowerCase();
+        let sem = row.children[1].textContent.toLowerCase();
+        let code = row.children[2].textContent.toLowerCase();
+        let credit = row.children[4].textContent.toLowerCase();
+
         
         if(description.includes(filter) || year_level.includes(filter) || sem.includes(filter) || code.includes(filter) || credit.includes(filter)) {
             row.style.display = "";
